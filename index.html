@@ -54,4 +54,131 @@
             border: none;
             padding: 15px 40px;
             font-size: 1.2rem;
-            font
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(194, 54, 22, 0.4);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-start:active {
+            transform: scale(0.95);
+        }
+
+        /* --- HALAMAN BIOGRAFI (KONTEN) --- */
+        .content-screen {
+            max-width: 700px;
+            width: 90%;
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: none;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .content-screen.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 3px solid #c23616;
+        }
+
+        h2 {
+            color: #c23616;
+            text-align: center;
+            border-bottom: 2px solid #fbc531;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.8;
+            text-align: justify;
+            text-indent: 30px;
+            font-size: 1.05rem;
+        }
+
+        .quote {
+            background-color: #fcedea;
+            border-left: 5px solid #c23616;
+            padding: 15px;
+            font-style: italic;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            text-indent: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #718093;
+            border-top: 1px solid #dcdde1;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-screen" id="welcomeScreen">
+        <h1>Sejarah & Biografi</h1>
+        <p>Mengenal Lebih Dekat Sang Proklamator Bangsa</p>
+        <button class="btn-start" onclick="mulaiAnimasi()">Mulai</button>
+    </div>
+
+    <div class="content-screen" id="contentScreen">
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Presiden_Sukarno.jpg/330px-Presiden_Sukarno.jpg" alt="Ir. Soekarno">
+        </div>
+        
+        <h2>Ir. Soekarno</h2>
+        
+        <p>Ir. Soekarno adalah Presiden pertama Republik Indonesia sekaligus pahlawan proklamator yang memainkan peran sentral dalam memerdekakan bangsa Indonesia dari penjajahan kolonial. Lahir di Surabaya pada 6 Juni 1901 dengan nama asli Koesno Sosrodihardjo, beliau lebih dikenal sebagai Bung Karno, seorang orator ulung yang mampu membakar semangat rakyat melalui pidato-pidatonya.</p>
+        
+        <div class="quote">
+            "Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya." <br><strong>— Ir. Soekarno</strong>
+        </div>
+
+        <p>Perjuangan politik Bung Karno dimulai sejak masa kuliah di Technische Hoogeschool te Bandoeng (sekarang ITB). Beliau mendirikan Partai Nasional Indonesia (PNI) pada tahun 1927 untuk memperjuangkan kemerdekaan nasional, yang menyebabkannya berulang kali ditangkap dan diasingkan oleh pemerintah Hindia Belanda ke berbagai daerah seperti Ende dan Bengkulu.</p>
+        
+        <p>Puncak perjuangan beliau terjadi pada tanggal 17 Agustus 1945, ketika bersama Drs. Mohammad Hatta, beliau memproklamasikan Kemerdekaan Republik Indonesia. Selama masa kepemimpinannya, Sukarno berhasil mempersatukan keragaman suku dan budaya Indonesia di bawah ideologi Pancasila yang dicetuskannya pada 1 Juni 1945, menjadikannya salah satu tokoh paling berpengaruh di panggung diplomasi dunia abad ke-20.</p>
+
+        <footer>
+            <p>&copy; 2026 Tugas Pemrograman Web Sejarah. Dibuat oleh Andi.</p>
+        </footer>
+    </div>
+
+    <script>
+        function mulaiAnimasi() {
+            const welcome = document.getElementById('welcomeScreen');
+            const content = document.getElementById('contentScreen');
+
+            welcome.classList.add('hide');
+
+            setTimeout(() => {
+                content.classList.add('show');
+                document.body.style.display = 'block';
+                document.body.style.padding = '10px 0';
+            }, 800);
+        }
+    </script>
+
+</body>
+</html>
