@@ -3,86 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biografi Toko Ir. Soekarno</title>
+    <title>Biografi Sejarah Ir. Soekarno</title>
     <style>
-        body { font-family: 'Georgia', serif; line-height: 1.6; margin: 0; padding: 0; background-color: #fcfbf7; color: #2c3e50; }
-        header { background-color: #8b0000; color: #f1c40f; text-align: center; padding: 30px 10px; border-bottom: 5px solid #d35400; }
-        header h1 { margin: 0; font-size: 1.8rem; }
-        header p { margin: 5px 0 0 0; font-style: italic; font-size: 0.9rem; color: #ffffff; }
-        .container { max-width: 800px; margin: 15px auto; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: #8b0000; border-bottom: 2px solid #f1c40f; padding-bottom: 5px; font-size: 1.3rem; }
-        .quote-box { background-color: #f9ebea; border-left: 5px solid #8b0000; padding: 10px; margin: 15px 0; font-style: italic; font-size: 0.95rem; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.85rem; }
-        table, th, td { border: 1px solid #d5dbdb; }
-        th, td { padding: 8px; text-align: left; }
-        th { background-color: #8b0000; color: white; }
-        tr:nth-child(even) { background-color: #fbf5f5; }
-        .contact-info { background-color: #f2f4f4; padding: 10px; border-left: 4px solid #d35400; border-radius: 4px; font-size: 0.85rem; }
-        footer { text-align: center; padding: 15px; margin-top: 30px; background-color: #2c3e50; color: white; font-size: 0.8rem; }
-    </style>
-</head>
-<body>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f6fa;
+            color: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-    <header>
-        <h1>PUTRA FAJAR BOOKSTORE</h1>
-        <p>Pusat Literasi, Biografi, dan Memorabilia Bung Karno</p>
-    </header>
+        /* --- HALAMAN AWAL (LANDING) --- */
+        .welcome-screen {
+            text-align: center;
+            padding: 20px;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            opacity: 1;
+            transform: scale(1);
+        }
 
-    <div class="container">
-        <div class="quote-box">
-            "Jangan sekali-kali meninggalkan sejarah (Jasmerah)." <br><strong>— Ir. Soekarno</strong>
-        </div>
+        .welcome-screen.hide {
+            opacity: 0;
+            transform: scale(0.9);
+            pointer-events: none;
+            position: absolute;
+        }
 
-        <section>
-            <h2>Sejarah & Biografi Toko</h2>
-            <p><strong>Putra Fajar Bookstore</strong> didirikan dengan semangat untuk merawat ingatan bangsa terhadap perjuangan Proklamator sekaligus Presiden pertama Republik Indonesia, Ir. Soekarno. Nama toko ini diambil dari julukan terkenal beliau, yaitu Sang Putra Fajar, yang lahir di saat fajar menyingsing.</p>
-            <p>Toko ini berawal dari sebuah komunitas pencinta sejarah nasional yang merasa kesulitan mencari literatur lengkap dan arsip pemikiran Bung Karno yang otentik. Sejak didirikan, kami mendedikasikan diri untuk menyediakan berbagai buku biografi, catatan pidato monumental seperti 'Lahirnya Pancasila', hingga pernak-pernik bernilai seni tinggi yang berkaitan dengan beliau.</p>
-        </section>
+        .welcome-screen h1 {
+            font-size: 2.5rem;
+            color: #c23616;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-        <section>
-            <h2>Koleksi & Produk Unggulan</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Kategori</th>
-                        <th>Contoh Produk</th>
-                        <th>Deskripsi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Buku & Biografi</strong></td>
-                        <td>Buku "Bung Karno: Penyambung Lidah Rakyat Indonesia"</td>
-                        <td>Koleksi buku biografi resmi dan kumpulan pemikiran politik Ir. Soekarno.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arsip Pidato</strong></td>
-                        <td>Buku kumpulan pidato kenegaraan, rekaman suara otentik.</td>
-                        <td>Dokumentasi teks pidato penting di forum nasional maupun internasional.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Memorabilia</strong></td>
-                        <td>Lukisan kanvas Bung Karno, poster eksklusif, pin kopiah.</td>
-                        <td>Suvenir pelengkap berdesain estetik untuk koleksi pribadi atau pajangan.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        .welcome-screen p {
+            font-size: 1.1rem;
+            color: #718093;
+            margin-bottom: 30px;
+        }
 
-        <section>
-            <h2>Kunjungi Toko Kami</h2>
-            <div class="contact-info">
-                <p>📍 <strong>Alamat Fisik:</strong> Jl. Proklamasi No. 1945, Kompleks Area Sejarah Nasional, Indonesia</p>
-                <p>📞 <strong>WhatsApp:</strong> 0819-4508-1950</p>
-                <p>✉️ <strong>Email Resmi:</strong> kontak@putrafajarbooks.id</p>
-                <p>⏰ <strong>Jam Buka:</strong> Setiap Hari (08.00 - 17.00 WITA)</p>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Putra Fajar Bookstore. Dibuat oleh Andi untuk Tugas Pemrograman Web.</p>
-    </footer>
-
-</body>
-</html>
+        .btn-start {
+            background-color: #c23616;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font
